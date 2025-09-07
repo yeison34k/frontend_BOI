@@ -53,7 +53,7 @@ function FormCard() {
   const sendDataToApi = async (data) => {
     try {
       const response = await fetch(
-        "https://[BASE_URL]/api/reporting-companies",
+        "http://72.60.119.40/api/reporting-companies",
         {
           method: "POST",
           headers: {

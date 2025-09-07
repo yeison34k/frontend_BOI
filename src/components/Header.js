@@ -8,7 +8,7 @@ const Header = () => {
         <div className="logo">
           <div className="logo-img">
             <img 
-              src="/nfcazul.jpg" 
+              src="/" 
               alt="National Filing Corp Logo" 
               style={{ width: '50px', height: 'auto' }} 
             />
