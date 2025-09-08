@@ -1,0 +1,197 @@
+/* src/styles/global.css */
+:root {
+  --primary-light: #2E86DE;
+  --primary: #1B6BCC;
+  --primary-dark: #0F52AC;
+  --accent: #00CC81;
+  --accent-dark: #00AA69;
+  --light: #F8F9FC;
+  --dark: #212529;
+  --gray: #6C757D;
+  --light-gray: #E9ECEF;
+  --gradient-primary: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--primary-light) 0%, var(--accent) 100%);
+  --border-radius: 10px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos globales para botones y enlaces */
+.btn {
+  display: inline-block;
+  background: var(--gradient-accent);
+  color: white;
+  padding: 16px 32px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 204, 129, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 204, 129, 0.4);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.6rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2:after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  background: var(--gradient-accent);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.section-title p {
+  color: var(--gray);
+  max-width: 700px;
+  margin: 25px auto 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .faq-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-features {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+  
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  
+  nav ul.show {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 15px 0;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .hero {
+    padding: 80px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .services, .faq, .contact {
+    padding: 70px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .slogan {
+    font-size: 1.1rem;
+  }
+  
+  .service-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+  
+  .logo-main {
+    font-size: 24px;
+  }
+  
+  .contact-form, .contact-info {
+    padding: 25px;
+  }
+}
